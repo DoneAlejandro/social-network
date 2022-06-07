@@ -1,42 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import s from "./Dialogs.module.scss";
-
-
-
-const DialogItem = (props) => {
-  const activeLink = ({ isActive }) => (isActive ? s.active : s.dialog);
-  let path = "/dialogs/" + props.id;
-  return (
-    <div className={s.dialog}>
-      <NavLink to={path} className={activeLink}>
-        {props.name}
-      </NavLink>
-    </div>
-  );
-};
-
-const Message = (props) => {
-  return <div className={s.dialog}>{props.message}</div>;
-};
+import DialogItem from "./DialogsItem/DialogsItem";
+import Message from "./Message/Message";
 
 const Dialogs = (props) => {
+  let dialogsElements = props.dialogs.map((d) => (
+    <DialogItem key={Math.random() * 100} name={d.name} id={d.id} />
+  ));
+  let messagesElements = props.messages.map((m) => (
+    <Message key={Math.random() * 100} message={m.message} />
+  ));
+
   return (
     <div className={s.dialogs}>
-      <div className={s.dialogsItems}>
-        <DialogItem name="Алексей" id="1" />
-        <DialogItem name="Степан" id="2" />
-        <DialogItem name="Василий" id="3" />
-        <DialogItem name="Инакентий" id="4" />
-        <DialogItem name="Фёдор" id="5" />
-      </div>
-      <div className={s.messages}>
-        <Message message="Привет" />
-        <Message message="Как дела?" />
-        <Message message="Что делаешь?" />
-        <Message message="Пойдём завтра гулять?" />
-        <Message message="Во сколько?" />
-      </div>
+      <div className={s.dialogsItems}>{dialogsElements}</div>
+      <div className={s.messages}>{messagesElements}</div>
     </div>
   );
 };
