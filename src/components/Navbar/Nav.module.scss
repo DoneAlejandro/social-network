@@ -1,5 +1,6 @@
 .itemBox {
   margin-bottom: 10px;
+  display: flex;
 }
 
 .item {
@@ -10,4 +11,9 @@
 
 .active {
   color: red;
+}
+
+.friendBox {
+  display: flex;
+  margin-top: 20px;
 }
