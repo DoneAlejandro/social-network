@@ -1,11 +1,31 @@
 let state = {
   dialogsPage: {
     dialogs: [
-      { id: 1, name: "Алексей", photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg" },
-      { id: 2, name: "Степан", photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg" },
-      { id: 3, name: "Василий", photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg" },
-      { id: 4, name: "Инакентий", photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg" },
-      { id: 5, name: "Фёдор", photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg" },
+      {
+        id: 1,
+        name: "Алексей",
+        photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg",
+      },
+      {
+        id: 2,
+        name: "Степан",
+        photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg",
+      },
+      {
+        id: 3,
+        name: "Василий",
+        photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg",
+      },
+      {
+        id: 4,
+        name: "Инакентий",
+        photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg",
+      },
+      {
+        id: 5,
+        name: "Фёдор",
+        photo: "https://android-obzor.com/wp-content/uploads/2022/03/45-2.jpg",
+      },
     ],
     messages: [
       { id: 1, message: "Привет" },
@@ -32,6 +52,16 @@ let state = {
       { id: 6, page: "Friends", to: "/friends" },
     ],
   },
+};
+
+export let addPost = (postMessage) => {
+  debugger;
+  let newPost = {
+    id: 4,
+    message: { postMessage },
+    likeCount: 2,
+  };
+  state.profilePage.posts.push(newPost);
 };
 
 export default state;
