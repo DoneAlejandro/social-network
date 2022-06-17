@@ -3,7 +3,7 @@ import s from "./MyPosts.module.scss";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let postsElement = props.state.map((m) => (
+  let postsElement = props.posts.map((m) => (
     <Post
       message={m.message}
       likeCount={m.likeCount}
@@ -12,11 +12,13 @@ const MyPosts = (props) => {
   ));
 
   let newPostElement = React.createRef();
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.updateNewPostText(text);
+  };
 
   let addPost = () => {
-    let text = newPostElement.current.value;
-    props.addPost(text);
-    newPostElement.current.value = "";
+    props.addPost();
   };
 
   return (
@@ -24,7 +26,11 @@ const MyPosts = (props) => {
       <h3 className={s.postsTitle}>My posts</h3>
       <div>
         <div className={s.postsArea}>
-          <textarea ref={newPostElement}></textarea>
+          <textarea
+            onChange={onPostChange}
+            ref={newPostElement}
+            value={props.newPostText}
+          />
         </div>
         <div className={s.postsBtn}>
           <button onClick={addPost}>Send message</button>

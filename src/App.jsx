@@ -17,15 +17,12 @@ function App(props) {
       <div className="app-wrapper-content">
         <Routes>
           <Route
-            path={"/"}
-            element={<Profile state={props.state.profilePage.posts} />}
-          />
-          <Route
-            path="/profile"
+            path={"/*"}
             element={
               <Profile
-                state={props.state.profilePage.posts}
+                profilePage={props.state.profilePage}
                 addPost={props.addPost}
+                updateNewPostText={props.updateNewPostText}
               />
             }
           />
