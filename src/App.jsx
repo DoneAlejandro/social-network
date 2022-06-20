@@ -28,7 +28,14 @@ function App(props) {
           />
           <Route
             path="/dialogs/*"
-            element={<Dialogs state={props.state.dialogsPage} />}
+            element={
+              <Dialogs
+                dialogsPage={props.state.dialogsPage}
+                addMessage={props.addMessage}
+                updateNewMessageText={props.updateNewMessageText}
+                // newMessageText={props.state.dialogsPage.newMessageText}
+              />
+            }
           />
           <Route path="/news" element={<News state={props.state.sidebar} />} />
           <Route
