@@ -21,7 +21,7 @@ function App(props) {
             path={"/*"}
             element={
               <Profile
-                store={props.store}
+                // store={props.store}
                 // profilePage={props.state.profilePage}
                 // dispatch={props.dispatch}
               />
@@ -31,7 +31,7 @@ function App(props) {
             path="/dialogs/*"
             element={
               <DialogsContainer
-                store={props.store}
+                // store={props.store}
                 // dialogsPage={props.state.dialogsPage}
                 // dispatch={props.dispatch}
                 // addMessage={props.addMessage}
@@ -40,14 +40,14 @@ function App(props) {
               />
             }
           />
-          <Route path="/news" element={<News state={props.state.sidebar} />} />
+          {/* <Route path="/news" element={<News state={props.state.sidebar} />} />
           <Route
             path="/music"
             element={<Music state={props.state.sidebar} />}
           />
           <Route
             path="/settings"
-            element={<Settings state={props.state.sidebar} />}
+            element={<Settings state={props.state.sidebar} />} */}
           />
           <Route path="/friends" element={<Friends />} />
         </Routes>

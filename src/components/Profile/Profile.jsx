@@ -4,13 +4,13 @@ import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import s from "./Profile.module.scss";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = (props) => {
+const Profile = () => {
   //   debugger;
   return (
     <div>
       <ProfileInfo />
       <MyPostsContainer
-        store={props.store}
+        // store={props.store}
         // posts={props.profilePage.posts}
         // newPostText={props.profilePage.newPostText}
         // updateNewPostText={props.updateNewPostText}
