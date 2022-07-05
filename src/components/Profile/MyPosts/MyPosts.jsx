@@ -3,6 +3,7 @@ import s from "./MyPosts.module.scss";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
+
   let postsElement = props.posts.map((m) => (
     <Post
       message={m.message}
