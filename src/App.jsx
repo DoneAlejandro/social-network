@@ -8,6 +8,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import Friends from "./components/Friends/Friends";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 function App(props) {
   //   debugger;
@@ -21,25 +22,14 @@ function App(props) {
             path={"/*"}
             element={
               <Profile
-                // store={props.store}
-                // profilePage={props.state.profilePage}
-                // dispatch={props.dispatch}
+              // store={props.store}
+              // profilePage={props.state.profilePage}
+              // dispatch={props.dispatch}
               />
             }
           />
-          <Route
-            path="/dialogs/*"
-            element={
-              <DialogsContainer
-                // store={props.store}
-                // dialogsPage={props.state.dialogsPage}
-                // dispatch={props.dispatch}
-                // addMessage={props.addMessage}
-                // updateNewMessageText={props.updateNewMessageText}
-                // newMessageText={props.state.dialogsPage.newMessageText}
-              />
-            }
-          />
+          <Route path="/dialogs/*" element={<DialogsContainer />} />
+          <Route path="/users" element={<UsersContainer />} />
           {/* <Route path="/news" element={<News state={props.state.sidebar} />} />
           <Route
             path="/music"
@@ -47,8 +37,8 @@ function App(props) {
           />
           <Route
             path="/settings"
-            element={<Settings state={props.state.sidebar} />} */}
-          />
+            element={<Settings state={props.state.sidebar} />}
+          /> */}
           <Route path="/friends" element={<Friends />} />
         </Routes>
       </div>

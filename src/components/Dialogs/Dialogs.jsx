@@ -5,6 +5,8 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
   let state = props.dialogsPage;
+  let newMessageText = state.newMessageText;
+
   let dialogsElements = state.dialogs.map((d) => (
     <DialogItem
       key={Math.random() * 100}
@@ -17,16 +19,12 @@ const Dialogs = (props) => {
     <Message key={Math.random() * 100} message={m.message} />
   ));
 
-  let newMessageText = state.newMessageText;
-
   let onAddMessage = () => {
-	
     props.addMessage();
     // props.dispatch(addMessageActionCreator());
   };
 
   let onMessageChange = (e) => {
-    
     let text = e.target.value;
     props.updateNewMessageText(text);
   };
@@ -37,6 +35,7 @@ const Dialogs = (props) => {
       <div className={s.messages}>{messagesElements}</div>
       <div className={s.addBox}>
         <textarea
+          placeholder="Enter your message"
           className={s.textarea}
           onChange={onMessageChange}
           value={newMessageText}

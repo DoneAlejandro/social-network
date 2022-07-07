@@ -40,7 +40,6 @@ let initialState = {
 };
 
 const dialogsReducer = (state = initialState, action) => {
-  //   debugger;
   switch (action.type) {
     case ADD_MESSAGE:
       let text = state.newMessageText;
@@ -52,7 +51,7 @@ const dialogsReducer = (state = initialState, action) => {
     case UPDATE_NEW_MESSAGE_TEXT:
       return {
         ...state,
-        newMessageText: action.text,
+        newMessageText: action.newMessageText,
       };
     default:
       return state;
