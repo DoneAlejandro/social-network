@@ -5,7 +5,7 @@ let initialState = {
   users: [
     {
       id: 1,
-      subscribe: true,
+      subscribe: false,
       userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
       fullName: "Alex",
       status: "Hey, whats up?",
@@ -16,7 +16,7 @@ let initialState = {
     },
     {
       id: 2,
-      subscribe: true,
+      subscribe: false,
       userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
       fullName: "Fedor",
       status: "Hey, whats up?",

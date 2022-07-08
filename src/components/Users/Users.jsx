@@ -1,29 +1,45 @@
 import React from "react";
+import styleOfUsers from "./Users.module.css";
 
 const Users = (props) => {
   return (
-    <div>
+    <div className={styleOfUsers.usersBox}>
       {props.users.map((u) => {
         return (
           <div key={u.id}>
             <div>
-              <img src={u.userPhoto} />
+              <img className={styleOfUsers.userPhoto} src={u.userPhoto} />
             </div>
-            ;
+
             <div>
-              <button></button>
+              {u.subscribe ? (
+                <button
+                  onClick={() => {
+                    props.subscribe(u.id);
+                  }}
+                >
+                  Отписаться
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    props.subscribe(u.id);
+                  }}
+                >
+                  Подписаться
+                </button>
+              )}
             </div>
-            ;
+
             <div>
-              <span>{u.fullName}</span>
+              <span className={styleOfUsers.fullName}>{u.fullName}</span>
               <span>{u.status}</span>
             </div>
-            ;
+
             <div>
               <span> {u.location.country} </span>
               <span> {u.location.city} </span>
             </div>
-            ;
           </div>
         );
       })}
