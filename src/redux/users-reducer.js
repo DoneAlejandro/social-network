@@ -1,41 +1,42 @@
 const TOGGLE_SUBSCRIBE = "TOGGLE-SUBSCRIBE";
 const SET_USERS = "SET-USERS";
 
+
 let initialState = {
   users: [
-    {
-      id: 1,
-      subscribe: false,
-      userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
-      fullName: "Alex",
-      status: "Hey, whats up?",
-      location: {
-        country: "Russia",
-        city: "Moscow",
-      },
-    },
-    {
-      id: 2,
-      subscribe: false,
-      userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
-      fullName: "Fedor",
-      status: "Hey, whats up?",
-      location: {
-        country: "Belarus",
-        city: "Minsk",
-      },
-    },
-    {
-      id: 3,
-      subscribe: false,
-      userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
-      fullName: "Alexandr",
-      status: "Hey, whats up?",
-      location: {
-        country: "Russia",
-        city: "Moscow",
-      },
-    },
+    // {
+    //   id: 1,
+    //   subscribe: false,
+    //   userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
+    //   fullName: "Alex",
+    //   status: "Hey, whats up?",
+    //   location: {
+    //     country: "Russia",
+    //     city: "Moscow",
+    //   },
+    // },
+    // {
+    //   id: 2,
+    //   subscribe: false,
+    //   userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
+    //   fullName: "Fedor",
+    //   status: "Hey, whats up?",
+    //   location: {
+    //     country: "Belarus",
+    //     city: "Minsk",
+    //   },
+    // },
+    // {
+    //   id: 3,
+    //   subscribe: false,
+    //   userPhoto: "https://www.kino-teatr.ru/video/7243/start.jpg",
+    //   fullName: "Alexandr",
+    //   status: "Hey, whats up?",
+    //   location: {
+    //     country: "Russia",
+    //     city: "Moscow",
+    //   },
+    // },
   ],
 };
 
